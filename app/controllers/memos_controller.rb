@@ -6,6 +6,7 @@ class MemosController < ApplicationController
 
   def create
     Memo.create(memo_params)
+    @memos = Memo.all
   end
   
   private
