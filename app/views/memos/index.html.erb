@@ -1,5 +1,5 @@
 <!--メモ登録用のフォーム-->
-<%= form_for @memo do |f| %>
+<%= form_for @memo, remote: true do |f| %>
   <%= f.text_field :text  %>
   <%= f.submit '投稿するze!' %>
 <% end %>
