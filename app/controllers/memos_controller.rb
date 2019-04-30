@@ -9,6 +9,11 @@ class MemosController < ApplicationController
     @memos = Memo.all
   end
   
+  def destroy
+    Memo.find(parms[:id].destroy)
+    @memos = Memo.all
+  end
+  
   private
   def memo_params
     params.require(:memo).permit(:text)
