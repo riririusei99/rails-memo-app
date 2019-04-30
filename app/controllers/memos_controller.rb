@@ -10,7 +10,7 @@ class MemosController < ApplicationController
   end
   
   def destroy
-    Memo.find(parms[:id].destroy)
+    Memo.find(params[:id]).destroy
     @memos = Memo.all
   end
   
